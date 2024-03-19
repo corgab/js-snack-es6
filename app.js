@@ -13,15 +13,13 @@ const tavoloVip =
 ]
 
 for(let i = 0; i < tavoloVip.length; i++) {
-    const vipCorrente = tavoloVip[i]
     //console.log(vipCorrente)
+    const vipCorrenteList = {}
+    const vipCorrente = tavoloVip[i]
 
-    vipCorrente.nomeTavolo = "tavolo vip"
-    vipCorrente.nomeOspite = vipCorrente
-    vipCorrente.posto = i+1
-    console.log(vipCorrente.nomeOspite)
+    vipCorrenteList.nomeTavolo = "tavolo vip"
+    vipCorrenteList.nomeOspite = vipCorrente
+    vipCorrenteList.posto = i + 1
+
+    console.log(vipCorrenteList)
 }
-
-// tavoloVip.forEach((Element) => {
-
-// })
