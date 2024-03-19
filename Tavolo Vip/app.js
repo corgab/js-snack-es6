@@ -12,6 +12,8 @@ const tavoloVip =
     'Maneskin'
 ]
 
+const listaAggiornata = []
+
 for(let i = 0; i < tavoloVip.length; i++) {
     //console.log(vipCorrente)
     const vipCorrenteList = {}
@@ -21,5 +23,20 @@ for(let i = 0; i < tavoloVip.length; i++) {
     vipCorrenteList.nomeOspite = vipCorrente
     vipCorrenteList.posto = i + 1
 
-    console.log(vipCorrenteList)
+    listaAggiornata.push(vipCorrenteList)
 }
+
+console.log(listaAggiornata)
+
+const listaAggiornata2 = tavoloVip.map((vipCorrente, i) => {
+    
+    const vipCorrenteList = {}
+    
+    vipCorrenteList.nomeTavolo = "tavolo vip"
+    vipCorrenteList.nomeOspite = vipCorrente
+    vipCorrenteList.posto = i + 1
+
+    return vipCorrenteList
+})
+
+console.log(listaAggiornata2)
