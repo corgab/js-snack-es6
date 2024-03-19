@@ -2,7 +2,6 @@
 // creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
 // lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
 
-
 const studentiList = [
     studente("Marco della Rovere", 213, 78),
     studente("Paola Cortellessa", 110, 96),
@@ -37,15 +36,26 @@ for(let i = 0; i < studentiList.length; i++) {
     
 }
 
+const nameUpper = studentiList.map((studente) => {
 
+    const newNameUpper = studente.nome.toUpperCase()
+
+    const studenteObj = {
+        nome: newNameUpper,
+        id: studente.id,
+        grades : studente.grades
+    }
+    return studenteObj
+})
+console.log(nameUpper)
 
 //s
 function studente(newname, newid, newgrades) {
     
-    const newNameUpper = newname.toUpperCase()
+    // const newNameUpper = newname.toUpperCase()
 
     const studenteObj = {
-        nome : newNameUpper,
+        nome : newname,
         id : newid,
         grades : newgrades
     }
